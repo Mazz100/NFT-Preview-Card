@@ -1,0 +1,115 @@
+//Variables
+$card-BG: hsl(216, 50%, 16%);
+$line-color: hsl(215, 32%, 27%);
+$etherium-active-color: hsl(178, 100%, 50%);
+$date-color: hsl(215, 51%, 70%);
+@use 'reset';
+
+
+@mixin Flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: hsl(217, 54%, 11%);
+    color: white;
+    @include Flex(column);
+
+}
+
+.container {
+    max-width: 19rem;
+    @include Flex(column);
+    flex: 1;
+}
+
+.main {
+    background-color: $card-BG;
+    padding: 20px;
+    border-radius: 12px;
+
+}
+
+.details {
+    @include Flex(row);
+    justify-content: space-between;
+    font-size: 0.8125rem;
+
+    .value {
+        color: $etherium-active-color ;
+        margin-right: 90px;
+    }
+
+    .date {
+        color: $date-color;
+
+    }
+}
+
+.author {
+    @include Flex(row);
+    justify-content: start;
+    font-size: 0.8125rem;
+
+    img {
+        border-radius: 50%;
+        border: 1px double;
+        margin-right: 10px;
+    }
+
+    span {
+        color: hsl(216, 15%, 45%);
+    }
+
+    .author-name {
+        color: hsl(0, 0%, 100%);
+    }
+
+}
+
+.line {
+    background-color: $line-color;
+    padding: 1px;
+    margin: 16px 0 16px 0;
+    border-radius: 50%;
+}
+
+.image-attribute {
+    border-radius: 8px;
+}
+
+.main-heading {
+    font-size: 1.125rem;
+    margin: 16px 0 16px 0;
+}
+
+
+
+.description {
+    color: hsl(216, 15%, 45%);
+    margin: 0 0 16px 0;
+
+}
+
+//Hover states
+.main-heading:hover {
+    cursor: pointer;
+    color: $etherium-active-color;
+}
+
+.author-name:hover {
+    cursor: pointer;
+    color: $etherium-active-color;
+}
+
+.image-attribute:hover {
+    cursor: pointer;
+    background-color: $etherium-active-color;
+    mix-blend-mode: exclusion;
+ 
+}
