@@ -114,6 +114,13 @@ body {
   border-radius: 12px;
 }
 
+.etherium-image {
+  overflow: hidden;
+}
+.etherium-image img {
+  border-radius: 8px;
+}
+
 .details {
   display: flex;
   flex-direction: row;
@@ -157,13 +164,9 @@ body {
   border-radius: 50%;
 }
 
-.image-attribute {
-  border-radius: 8px;
-}
-
 .main-heading {
   font-size: 1.125rem;
-  margin: 16px 0 16px 0;
+  margin: 20px 0 12px 0;
 }
 
 .description {
@@ -171,18 +174,20 @@ body {
   margin: 0 0 16px 0;
 }
 
-.main-heading:hover {
+.active-state:hover {
   cursor: pointer;
   color: hsl(178, 100%, 50%);
 }
 
-.author-name:hover {
+.etherium-image:hover {
   cursor: pointer;
-  color: hsl(178, 100%, 50%);
+  background-color: hsl(178, 100%, 70%);
+  background-image: url(../images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
 }
-
-.image-attribute:hover {
-  cursor: pointer;
-  background-color: hsl(178, 100%, 50%);
-  mix-blend-mode: exclusion;
+.etherium-image:hover img {
+  opacity: 0.3;
+  mix-blend-mode: darken;
 }/*# sourceMappingURL=style.css.map */

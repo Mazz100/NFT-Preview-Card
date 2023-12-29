@@ -35,6 +35,14 @@ body {
 
 }
 
+.etherium-image {
+    overflow: hidden;
+
+    img {
+        border-radius: 8px;
+    }
+}
+
 .details {
     @include Flex(row);
     justify-content: space-between;
@@ -79,16 +87,12 @@ body {
     border-radius: 50%;
 }
 
-.image-attribute {
-    border-radius: 8px;
-}
+
 
 .main-heading {
     font-size: 1.125rem;
-    margin: 16px 0 16px 0;
+    margin: 20px 0 12px 0;
 }
-
-
 
 .description {
     color: hsl(216, 15%, 45%);
@@ -97,19 +101,21 @@ body {
 }
 
 //Hover states
-.main-heading:hover {
+.active-state:hover {
     cursor: pointer;
     color: $etherium-active-color;
 }
 
-.author-name:hover {
+.etherium-image:hover {
     cursor: pointer;
-    color: $etherium-active-color;
-}
+    background-color: hsl(178, 100%, 70%);
+    background-image: url(../images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
 
-.image-attribute:hover {
-    cursor: pointer;
-    background-color: $etherium-active-color;
-    mix-blend-mode: exclusion;
- 
+    img {
+        opacity: 0.3;
+        mix-blend-mode: darken;
+    }
 }
