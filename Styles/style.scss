@@ -30,17 +30,44 @@ body {
 
 .main {
     background-color: $card-BG;
-    padding: 20px;
+    padding: 16px;
     border-radius: 12px;
-
 }
 
-.etherium-image {
+.etherium-button {
+    display: block;
+    position: relative;
+    border: none;
+    padding: 0;
+    border-radius: 8px;
     overflow: hidden;
 
-    img {
-        border-radius: 8px;
+    .equilibrium-image {
+        display: block;
+        width: 100%;
     }
+}
+
+.etherium-button::before{
+    background-color: $card-BG;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    opacity: 0;
+    z-index: 5;
+}
+
+.etherium-button::after{
+    background-image: url(../images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    opacity: 0;
+    z-index: 10;
 }
 
 .details {
@@ -51,6 +78,10 @@ body {
     .value {
         color: $etherium-active-color ;
         margin-right: 90px;
+    }
+
+    .clock {
+        margin-left: 12px;
     }
 
     .date {
@@ -87,35 +118,48 @@ body {
     border-radius: 50%;
 }
 
-
-
 .main-heading {
     font-size: 1.125rem;
-    margin: 20px 0 12px 0;
+    margin: 16px 0 12px 0;
 }
 
 .description {
     color: hsl(216, 15%, 45%);
     margin: 0 0 16px 0;
+}
 
+//Footer attributes
+.attribution {
+    width: 100%;
+    background-color: $card-BG;
+    padding: 12px;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 100%, 70%);
 }
 
 //Hover states
+.active-state {
+    text-decoration: none;
+    color: inherit;
+}
+
 .active-state:hover {
     cursor: pointer;
     color: $etherium-active-color;
 }
 
-.etherium-image:hover {
+.etherium-button:hover {
     cursor: pointer;
-    background-color: hsl(178, 100%, 70%);
-    background-image: url(../images/icon-view.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden;
 
-    img {
-        opacity: 0.3;
-        mix-blend-mode: darken;
+    .etherium-button::before{
+        opacity: 0.7;
+    }
+
+    .etherium-button::after{
+        opacity: 1;
     }
 }
