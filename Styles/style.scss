@@ -82,6 +82,7 @@ body {
     @include Flex(row);
     justify-content: space-between;
     font-size: 0.8125rem;
+    font-weight: 700;
 
     .value {
         color: $etherium-active-color ;
@@ -101,7 +102,7 @@ body {
 .author {
     @include Flex(row);
     justify-content: start;
-    font-size: 0.8125rem;
+    font-size: 0.825rem;
 
     img {
         border-radius: 50%;
@@ -127,8 +128,8 @@ body {
 }
 
 .main-heading {
-    font-size: 1.125rem;
-    margin: 16px 0 12px 0;
+    font-size: 1.25rem;
+    margin: 24px 0 12px 0;
 }
 
 .description {

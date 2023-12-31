@@ -163,6 +163,7 @@ body {
   align-items: center;
   justify-content: space-between;
   font-size: 0.8125rem;
+  font-weight: 700;
 }
 .details .value {
   color: hsl(178, 100%, 50%);
@@ -181,7 +182,7 @@ body {
   justify-content: center;
   align-items: center;
   justify-content: start;
-  font-size: 0.8125rem;
+  font-size: 0.825rem;
 }
 .author img {
   border-radius: 50%;
@@ -203,8 +204,8 @@ body {
 }
 
 .main-heading {
-  font-size: 1.125rem;
-  margin: 16px 0 12px 0;
+  font-size: 1.25rem;
+  margin: 24px 0 12px 0;
 }
 
 .description {
