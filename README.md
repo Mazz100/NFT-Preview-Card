@@ -42,6 +42,7 @@ Users should be able to:
 
 - I learned to have an interactive element for any active state, whether a text or an image.
 - I learned how to use the overflow property with a border radius to eliminate sharp corners outside of the parent class.
+- Learned pseudo class and pseudo element `::before` `::after` and how to combine multiple styles on top of original style element.
 
 
 ```html
@@ -50,12 +51,18 @@ Users should be able to:
 </button>
 ```
 ```css
-.proud-of-this-css {
- .etherium-button {
-    border: none;
-    padding: 0;
-    border-radius: 8px;
-    overflow: hidden;
-}
+.etherium-button::before {
+    background-image: url(../images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    opacity: 0;
+    transition: opacity 0.2s linear;
+    z-index: 10;
 }
 ```
