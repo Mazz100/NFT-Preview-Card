@@ -100,7 +100,7 @@ body {
 }
 
 .container {
-  max-width: 19rem;
+  max-width: 21rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,7 +110,7 @@ body {
 
 .main {
   background-color: hsl(216, 50%, 16%);
-  padding: 16px;
+  padding: 20px;
   border-radius: 12px;
 }
 
@@ -139,12 +139,12 @@ body {
   height: 100%;
   content: "";
   opacity: 0;
-  transition: opacity 0.2s linear;
+  transition: all 0.2s 0.2s linear;
   z-index: 10;
 }
 
 .etherium-button::after {
-  background-color: hsl(178, 100%, 50%);
+  background-color: hsl(216, 50%, 16%);
   top: 0;
   left: 0;
   position: absolute;
@@ -152,7 +152,7 @@ body {
   height: 100%;
   content: "";
   opacity: 0;
-  transition: opacity 0.2s linear;
+  transition: all 0.2s linear;
   z-index: 5;
 }
 
@@ -166,10 +166,10 @@ body {
 }
 .details .value {
   color: hsl(178, 100%, 50%);
-  margin-right: 90px;
+  margin-right: 120px;
 }
 .details .clock {
-  margin-left: 12px;
+  margin-left: 16px;
 }
 .details .date {
   color: hsl(215, 51%, 70%);
@@ -228,7 +228,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-  transition: color 0.3s linear;
+  transition: all 150ms linear;
 }
 
 .active-state:hover {
@@ -241,4 +241,5 @@ body {
 
 .etherium-button:hover::after {
   opacity: 0.5;
+  background-color: hsl(178, 100%, 50%);
 }/*# sourceMappingURL=style.css.map */

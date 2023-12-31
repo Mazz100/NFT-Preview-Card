@@ -1,4 +1,5 @@
 //Variables
+$main-BG: hsl(217, 54%, 11%);
 $card-BG: hsl(216, 50%, 16%);
 $line-color: hsl(215, 32%, 27%);
 $etherium-active-color: hsl(178, 100%, 50%);
@@ -16,21 +17,21 @@ $date-color: hsl(215, 51%, 70%);
 
 body {
     font-family: 'Outfit', sans-serif;
-    background-color: hsl(217, 54%, 11%);
+    background-color: $main-BG;
     color: white;
     @include Flex(column);
 
 }
 
 .container {
-    max-width: 19rem;
+    max-width: 21rem;
     @include Flex(column);
     flex: 1;
 }
 
 .main {
     background-color: $card-BG;
-    padding: 16px;
+    padding: 20px;
     border-radius: 12px;
 }
 
@@ -42,7 +43,6 @@ body {
     padding: 0;
     border-radius: 8px;
     overflow: hidden;
-
 
     .equilibrium-image {
         display: block;
@@ -61,12 +61,12 @@ body {
     height: 100%;
     content: '';
     opacity: 0;
-    transition: opacity 0.2s linear;
+    transition: all 0.2s 0.2s linear;
     z-index: 10;
 }
 
 .etherium-button::after {
-    background-color: $etherium-active-color;
+    background-color: $card-BG;
     top: 0;
     left: 0;
     position: absolute;
@@ -74,7 +74,7 @@ body {
     height: 100%;
     content: '';
     opacity: 0;
-    transition: opacity 0.2s linear;
+    transition: all 0.2s linear;
     z-index: 5;
 }
 
@@ -85,11 +85,11 @@ body {
 
     .value {
         color: $etherium-active-color ;
-        margin-right: 90px;
+        margin-right: 120px;
     }
 
     .clock {
-        margin-left: 12px;
+        margin-left: 16px;
     }
 
     .date {
@@ -129,7 +129,6 @@ body {
 .main-heading {
     font-size: 1.125rem;
     margin: 16px 0 12px 0;
-
 }
 
 .description {
@@ -155,7 +154,7 @@ body {
     cursor: pointer;
     text-decoration: none;
     color: inherit;
-    transition: color 0.3s linear;
+    transition: all 150ms linear;
 }
 
 .active-state:hover {
@@ -168,4 +167,5 @@ body {
 
 .etherium-button:hover::after {
     opacity: 0.5;
+    background-color: $etherium-active-color;
 }
